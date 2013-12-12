@@ -20,16 +20,11 @@ This christmas we wanted to show these shining characteristics that make us one 
 www.deepblue-stars.com
 
 ##################
-Head of Digital: Thorsten Schapmann
-
-Managing Creative Director: Christian Thron, Oliver Drost
-
-Creative Director: Burkhard Müller
-
-Senior Interaction Designer: Karsten Bruns
-
-Interaction Designer: Javier Garcia
-
-Copywriter: Astarte Toomeh, Nina Drangmeister
-
+Head of Digital: Thorsten Schapmann  
+Managing Creative Director: Christian Thron, Oliver Drost  
+Creative Director: Burkhard Müller  
+Senior Interaction Designer: Karsten Bruns  
+Interaction Designer: Javier Garcia  
+Developer: Javier Garcia  
+Copywriter: Astarte Toomeh, Nina Drangmeister  
 Motion Designer: Björn Volkenand, Nils Pfeifer, Leon Friedrich
