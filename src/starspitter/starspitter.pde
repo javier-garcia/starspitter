@@ -46,6 +46,9 @@ void draw( ){
         tm.setTweenEndValue( 2, map( dm.getHighGamma( ), 0, 100, 0, 350 ) );
         tm.setTweenEndValue( 3, map( dm.getHighBeta( ), 0, 100, 0, 350 ) );
         tm.setTweenEndValue( 4, map( dm.getDelta( ), 0, 100, 0, 350 ) );
+        tm.setBackgroundTweenEndValue( map( dm.getAttention( ), 0, 100, 125, 400 ) );
+        
+        println( dm.getAttention( ) );
         
         cm.setMessageText( "Record " + actualRecord + " of " + dm.getRecordsCount( ) );        
       }
@@ -57,11 +60,12 @@ void draw( ){
         
         println("Record " + actualRecord + " of " + dm.getRecordsCount( ));
         
-        tm.setTweenEndValue( 0, map( dm.getTheta( ), 0, 100, 0, 350 ) );
-        tm.setTweenEndValue( 1, map( dm.getHighAlpha( ), 0, 100, 0, 350 ) );
-        tm.setTweenEndValue( 2, map( dm.getHighGamma( ), 0, 100, 0, 350 ) );
-        tm.setTweenEndValue( 3, map( dm.getHighBeta( ), 0, 100, 0, 350 ) );
-        tm.setTweenEndValue( 4, map( dm.getDelta( ), 0, 100, 0, 350 ) );
+        tm.setTweenEndValue( 0, map( dm.getTheta( ), 0, 100, 0, 347 ) );
+        tm.setTweenEndValue( 1, map( dm.getHighAlpha( ), 0, 100, 0, 347 ) );
+        tm.setTweenEndValue( 2, map( dm.getHighGamma( ), 0, 100, 0, 347 ) );
+        tm.setTweenEndValue( 3, map( dm.getHighBeta( ), 0, 100, 0, 347 ) );
+        tm.setTweenEndValue( 4, map( dm.getDelta( ), 0, 100, 0, 347 ) );
+        tm.setBackgroundTweenEndValue( map( dm.getAttention( ), 0, 100, 125, 400 ) );
       } else {
         cm.setMessageText( "No Mindwave connection" );
       }

@@ -10,7 +10,7 @@ class PercentTween{
   PercentTween(){
     actualValue = 0;
     duration = 0;
-    //speed = 75;
+    speed = 75;
   }
   
   void update(int Time){
@@ -34,8 +34,8 @@ class PercentTween{
     endValue = Value;
     startValue = actualValue;
     valueChange = endValue - startValue;
-    //duration = abs(round(valueChange * 1000 / speed));
-    duration = 1000;
+    duration = abs(round(valueChange * 1000 / speed));
+    //duration = 1000;
   }
   
   public float getValue(){

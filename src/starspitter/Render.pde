@@ -8,7 +8,9 @@ class Render{
   }
   
   public void render( ParticlesManager pm ){
-    //sm.getBackground( ).draw( );
+    
+    renderBackground( pm );
+    
     sm.getTemplate( ).draw( );
     
     renderParticles( pm );
@@ -18,17 +20,37 @@ class Render{
     sm.getOutline( ).draw( );
   }
   
+  private void renderBackground( ParticlesManager pm ){
+    Particle[] particles;
+    Particle p;
+    RShape tempShape;
+    
+    particles = pm.getBackgroundParticles( );
+    
+    for( int particleIndex = 0; particleIndex < particles.length; particleIndex++ ){
+      p = particles[ particleIndex ];
+      
+      if( p.getScale( ) > 0 ){
+        tempShape = new RShape( p.getShape( ) );
+        tempShape.scale( p.getScale( ), tempShape.getCenter().x, tempShape.getCenter().y );
+        tempShape.draw();
+      }
+    }
+  }
+  
   private void renderParticles( ParticlesManager pm ){
     Particle[][][] particles;
     Particle p;
     RShape tempShape;
     
-    particles = pm.getParticles();
+    particles = pm.getSectorsParticles();
+    
+    
     
     for( int sectorIndex = 0; sectorIndex < 5; sectorIndex++ ){
       for( int areaIndex = 0; areaIndex < 5; areaIndex++ ){
-        for( int shapeIndex = 0; shapeIndex < particles[ sectorIndex ][ areaIndex ].length; shapeIndex++ ){
-          p = particles[ sectorIndex ][ areaIndex ][ shapeIndex ];
+        for( int particleIndex = 0; particleIndex < particles[ sectorIndex ][ areaIndex ].length; particleIndex++ ){
+          p = particles[ sectorIndex ][ areaIndex ][ particleIndex ];
           
           if( p.getScale( ) > 0 ){
             tempShape = new RShape( p.getShape( ) );

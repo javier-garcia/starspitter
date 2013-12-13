@@ -72,7 +72,8 @@ class ControlsManager implements ControlListener{
     fileInput = cp5.addTextfield( "file" )
         .setPosition( 10, 20 )
         .setSize( 200, 20 )
-        .setGroup( fileControls );
+        .setGroup( fileControls )
+        .setText( "sample-data" );
 
     fileInput.getCaptionLabel( )
       .style( )
